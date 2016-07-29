@@ -19,7 +19,8 @@
   "homepage": "https://github.com/hollygood/first-react#readme",
   "dependencies": {
     "react": "^15.2.0",
-    "react-dom": "^15.2.0"
+    "react-dom": "^15.2.0",
+    "react-router": "^2.0.0-rc5"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
