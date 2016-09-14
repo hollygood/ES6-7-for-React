@@ -2,7 +2,9 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var transparentBg = require('../styles').transparentBg;
 
-//function stateless components instead of using createClass
+//use function stateless components instead of using createClass
+//Saperate container components from presentation component
+//Presentation component：Prompt, Container component: PromptContainer
 
 function Prompt(props) {
     return (

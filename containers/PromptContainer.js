@@ -3,7 +3,7 @@ var Prompt = require('../components/Prompt');
 
 var PromptContainer = React.createClass({
     contextTypes: {
-      router: React.PropTypes.object.isRequired
+        router: React.PropTypes.object.isRequired
     },
     getInitialState: function() {
         return {
@@ -11,15 +11,15 @@ var PromptContainer = React.createClass({
         }
     },
     handleUpdateUser: function(e) {
-      this.setState({
-          username: e.target.value
-      })
+        this.setState({
+            username: e.target.value
+        })
     },
     handleSubmitUser: function(e) {
-      e.preventDefault();
+        e.preventDefault();
         var username = this.state.username;
         this.setState({
-           username: ''
+            username: ''
         });
 
         if (this.props.routeParams.playerOne) {
@@ -35,17 +35,17 @@ var PromptContainer = React.createClass({
             this.context.router.push('/playerTwo/' + this.state.username)
         }
     },
-   render: function() {
-       //console.log(this);
-       return (
-           <Prompt
+    render: function() {
+        //console.log(this);
+        return (
+            <Prompt
                 onSubmitUser={this.handleSubmitUser}
                 onUpdateUser={this.handleUpdateUser}
                 header={this.props.route.header}
                 username={this.state.username}
-           />
-       )
-   }
+            />
+        )
+    }
 });
 
 module.exports = PromptContainer;
