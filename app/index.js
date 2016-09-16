@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var routes = require('../config/routes');
+var routes = require('./config/routes');
 var Raven = require('raven-js');
 
 var sentryKey = 'cd2a3db5675a4c1e859ef3f56ba0b31b';
