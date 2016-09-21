@@ -5,6 +5,7 @@ var UserDetailsWrapper = require('./UserDetailsWrapper');
 var UserDetails = require('./UserDetails');
 var Link = require('react-router').Link;
 var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 //you can now have components that are just normal functions if those
 // components only have a render method and optional props.
@@ -23,7 +24,7 @@ function Results(props) {
 
     if (props.isLoading === true) {
         return (
-            <p>LOADING...</p>
+            <Loading />
         )
     }
 
