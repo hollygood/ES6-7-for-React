@@ -33,8 +33,8 @@ function getPlayersData(player) {
 
 function calculateScores(players) {
     return [
-        players[0].follows * 3 + players[0].totalStars,
-        players[1].follows * 3 + players[0].totalStars,
+        players[0].followers * 3 + players[0].totalStars,
+        players[1].followers * 3 + players[0].totalStars,
     ];
 }
 
