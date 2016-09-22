@@ -12,6 +12,11 @@ var _APP_INFO = {
 	version: '1.0'
 };
 
+//let user send error feedback to Sentry
+window.onerror = function() {
+	Reven.showReportDialog();
+};
+
 Raven.config(sentryURL, {
 	release: _APP_INFO.version,
 	tags: {
