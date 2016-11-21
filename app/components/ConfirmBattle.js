@@ -1,11 +1,10 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
-var styles = require('../styles');
-var Link = require('react-router').Link;
-var UserDetailsWrapper = require('./UserDetailsWrapper');
-var UserDetails = require('./UserDetails');
-var MainContainer = require('./MainContainer');
-var Loading = require('./Loading');
+import React, { PropTypes } from 'react';
+import { space } from '../styles';
+import { Link } from 'react-router';
+import UserDetailsWrapper from './UserDetailsWrapper';
+import UserDetails from './UserDetails';
+import MainContainer from './MainContainer';
+import Loading from './Loading';
 
 
 function puke(object) {
@@ -19,19 +18,19 @@ function ConfirmBattle(props) {
             <h1>Confirm Players</h1>
             <div className='col-sm-8 col-sm-offset-2'>
                 <UserDetailsWrapper header='Player One'>
-                    <UserDetails info={props.playersInfo[0]} />
+                     <UserDetails info={props.playersInfo[0]} />
                 </UserDetailsWrapper>
                 <UserDetailsWrapper header='Player Two'>
                     <UserDetails info={props.playersInfo[1]} />
                 </UserDetailsWrapper>
             </div>
             <div className='col-sm-8 col-sm-offset-2'>
-                <div className='col-sm-12' style={styles.space}>
+                <div className='col-sm-12' style={space}>
                     <button type="button" onClick={props.onInitiateBattle} className="btn btn-lg btn-success">
                         Initiate Battle!
                     </button>
                 </div>
-                <div className='col-sm-12' style={styles.space}>
+                <div className='col-sm-12' style={space}>
                     <Link to='/playerOne'>
                         <button type="button" className="btn btn-lg btn-danger">
                             Reselect Players
@@ -48,4 +47,4 @@ ConfirmBattle.propTypes = {
     playersInfo: PropTypes.array.isRequired
 };
 
-module.exports = ConfirmBattle;
+export default ConfirmBattle;
